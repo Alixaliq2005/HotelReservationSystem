@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240803-02
+      author: AlihuseynKhaligov
+      changes:
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: name
+                  value: Elvin
+              - column:
+                  name: fin_code
+                  value: 7AAAAA7
+              - column:
+                  name: password
+                  value: elvin123

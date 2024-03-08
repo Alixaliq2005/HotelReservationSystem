@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240803-06
+      author: AlihuseynKhaligov
+      changes:
+        - modifyDataType:
+            tableName: user
+            columnName: fin_code
+            newDataType: VARCHAR(255)

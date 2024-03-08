@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240803-01
+      author: AlihuseynKhaligov
+      changes:
+        - createTable:
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: user_pkey
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: mail
+                  type: VARCHAR(255)
+              - column:
+                  name: password
+                  type: VARCHAR(255)

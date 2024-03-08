@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240803-02
+      author: AlihuseynKhaligov
+      changes:
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: name
+                  value: Alihuseyn
+              - column:
+                  name: mail
+                  value: alihuseynxaliqov@gmail.com
+              - column:
+                  name: password
+                  value: alihuseyn

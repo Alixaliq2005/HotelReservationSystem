@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20240803-05
+      author: AlihuseynKhaligov
+      changes:
+        - addColumn:
+            tableName: user
+            columns:
+              - column:
+                  name: fin_code
+                  type: INT
