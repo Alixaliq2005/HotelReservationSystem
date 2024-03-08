@@ -1,13 +1,13 @@
-package az.ingress.ms2example;
+package az.ingress.HotelReservation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Ms2ExampleApplication {
+public class HotelReservationSystem {
 
     public static void main(String[] args) {
-        SpringApplication.run(Ms2ExampleApplication.class, args);
+        SpringApplication.run(HotelReservationSystem.class, args);
 
     }
 }

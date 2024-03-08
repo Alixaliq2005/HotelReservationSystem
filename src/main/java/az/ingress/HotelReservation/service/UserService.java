@@ -1,11 +1,10 @@
-package az.ingress.ms2example.service;
+package az.ingress.HotelReservation.service;
 
-import az.ingress.ms2example.dto.LoginDto;
-import az.ingress.ms2example.dto.ResetPasswordDto;
-import az.ingress.ms2example.dto.UserRegisterDto;
-import az.ingress.ms2example.entity.ResetPassword;
-import az.ingress.ms2example.entity.User;
-import az.ingress.ms2example.repository.UserRepository;
+import az.ingress.HotelReservation.dto.LoginDto;
+import az.ingress.HotelReservation.dto.UserRegisterDto;
+import az.ingress.HotelReservation.entity.ResetPassword;
+import az.ingress.HotelReservation.entity.User;
+import az.ingress.HotelReservation.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package az.ingress.ms2example.dto;
+package az.ingress.HotelReservation.dto;
 
 import lombok.Data;
 

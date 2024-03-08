@@ -1,6 +1,6 @@
-package az.ingress.ms2example.repository;
+package az.ingress.HotelReservation.repository;
 
-import az.ingress.ms2example.entity.User;
+import az.ingress.HotelReservation.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

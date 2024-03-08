@@ -1,11 +1,10 @@
-package az.ingress.ms2example.controller;
+package az.ingress.HotelReservation.controller;
 
-import az.ingress.ms2example.dto.LoginDto;
-import az.ingress.ms2example.dto.ResetPasswordDto;
-import az.ingress.ms2example.dto.UserRegisterDto;
-import az.ingress.ms2example.entity.ResetPassword;
-import az.ingress.ms2example.entity.User;
-import az.ingress.ms2example.service.UserService;
+import az.ingress.HotelReservation.dto.LoginDto;
+import az.ingress.HotelReservation.dto.UserRegisterDto;
+import az.ingress.HotelReservation.entity.ResetPassword;
+import az.ingress.HotelReservation.entity.User;
+import az.ingress.HotelReservation.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

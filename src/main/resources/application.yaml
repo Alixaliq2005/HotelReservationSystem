@@ -1,5 +1,5 @@
 server:
-  port: 7171
+  port: 7170
 spring:
   application:
     name: RegisterAndLogin

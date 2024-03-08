@@ -1,4 +1,4 @@
-package az.ingress.ms2example.entity;
+package az.ingress.HotelReservation.entity;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
