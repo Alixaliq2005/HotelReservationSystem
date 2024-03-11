@@ -1,7 +1,8 @@
 package az.ingress.HotelReservation.service;
 
-import az.ingress.HotelReservation.dto.LoginDto;
+import az.ingress.HotelReservation.dto.UserDto;
 import az.ingress.HotelReservation.dto.UserRegisterDto;
+import az.ingress.HotelReservation.entity.Login;
 import az.ingress.HotelReservation.entity.ResetPassword;
 import az.ingress.HotelReservation.entity.User;
 import az.ingress.HotelReservation.repository.UserRepository;
@@ -34,16 +35,21 @@ public class UserService {
 
     }
 
-    public User findUser(Long id) {
-       return userRepository.findById(Math.toIntExact (id)).orElseThrow (()->new RuntimeException ());
+    public UserDto findUser(Long id) {
+        User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException());
+        UserDto userDto = new UserDto();
+        userDto.setUserName(user.getUserName());
+        userDto.setPassword(user.getPassword());
+        userDto.setEmail(user.getEmail());
+        return userDto;
     }
 
-    public boolean login(LoginDto loginDto) {
-        User user=userRepository.findByUserName(loginDto.getUserName ());
+    public boolean login(Login login) {
+        User user=userRepository.findByUserName(login.getUserName ());
         if (user==null){
-            throw new RuntimeException ("not found this username"+loginDto.getUserName ());
+            throw new RuntimeException ("not found this username"+login.getUserName ());
         }
-        return user.getPassword ().equals (loginDto.getPassword ());
+        return user.getPassword ().equals (login.getPassword ());
 
     }
 

@@ -3,14 +3,8 @@ package az.ingress.HotelReservation.dto;
 import lombok.Data;
 
 @Data
-public class UserRegisterDto {
-
-
-    String userName;
-
-    String password;
+public class UserRegisterDto extends UserDto {
 
     String repeatPassword;
 
-    String email;
 }

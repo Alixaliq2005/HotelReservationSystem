@@ -7,10 +7,9 @@ import lombok.experimental.FieldDefaults;
 
 @Entity
 @Data
-@Table(name = "users")
+@Table(name = "login")
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class User {
-
+public class Login {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
@@ -18,10 +17,4 @@ public class User {
     String userName;
 
     String password;
-
-    String repeatPassword;
-
-    String email;
-
-
 }

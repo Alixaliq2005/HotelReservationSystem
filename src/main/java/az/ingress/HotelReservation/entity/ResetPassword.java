@@ -12,7 +12,7 @@ import lombok.experimental.FieldDefaults;
 public class ResetPassword {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
+    Long id;
 
     String email;
 
