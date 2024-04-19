@@ -4,6 +4,7 @@ package az.ingress.HotelReservation.service;
 import az.ingress.HotelReservation.dto.request.HotelRequest;
 import az.ingress.HotelReservation.dto.response.HotelResponse;
 import az.ingress.HotelReservation.entity.Hotel;
+import az.ingress.HotelReservation.entity.RoomType;
 import az.ingress.HotelReservation.repository.HotelRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -32,6 +33,19 @@ public class HotelServiceImpl {
                 .map(hotel -> modelMapper.map(hotel, HotelResponse.class))
                 .collect(Collectors.toList());
     }
+
+    public List<Hotel> findSingleRooms() {
+        return hotelRepository.findByRoomType(RoomType.SINGLE);
+    }
+
+
+
+    public List<Hotel> findDoubleRooms() {
+        return hotelRepository.findByRoomType(RoomType.DOUBLE);
+    }
+
+
+
 
     public HotelResponse save(HotelRequest hotelRequest) {
         Hotel hotel = modelMapper.map(hotelRequest, Hotel.class);

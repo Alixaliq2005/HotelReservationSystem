@@ -4,7 +4,6 @@ import az.ingress.HotelReservation.dto.UserDto;
 import az.ingress.HotelReservation.dto.UserRegisterDto;
 import az.ingress.HotelReservation.entity.Login;
 import az.ingress.HotelReservation.entity.ResetPassword;
-import az.ingress.HotelReservation.entity.User;
 import az.ingress.HotelReservation.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
