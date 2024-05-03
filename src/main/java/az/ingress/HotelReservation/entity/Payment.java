@@ -1,28 +1,28 @@
 package az.ingress.HotelReservation.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Data;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @Entity
+@Builder
 @Data
-@Table(name = "users")
+@AllArgsConstructor
+@RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class User {
-
+@Table(name = "payments")
+public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
 
-    String userName;
+    Long paymentId;
 
-    String password;
+    String paymentAmount;
 
-    String repeatPassword;
+    String paymentDate;
 
-    String email;
+    String paymentMethod;
 
 
 }
+
