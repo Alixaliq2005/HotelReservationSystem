@@ -15,13 +15,14 @@ public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    Long paymentId;
+    Long id;
 
     String paymentAmount;
 
     String paymentDate;
 
-    String paymentMethod;
+    @Enumerated(EnumType.STRING)
+    PaymentMethod paymentMethod;
 
 
 }

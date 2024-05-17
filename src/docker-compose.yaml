@@ -1,15 +1,16 @@
-
 version: '3.3'
 services:
-  RegisterAndLogin:
-    hostname: postgres-db
-    image: postgres
+  SPEC:
+    image: mysql:latest
     environment:
-      POSTGRES_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
     ports:
-      - '1010:5432'
+      - '1984:3306'
     volumes:
-      - my-db:/var/lib/postgresql
-
+      - my-db:/var/lib/mysql
+  adminer:
+    image: dockette/adminer:full-php5
+    ports:
+      - '3333:8080'
 volumes:
   my-db:

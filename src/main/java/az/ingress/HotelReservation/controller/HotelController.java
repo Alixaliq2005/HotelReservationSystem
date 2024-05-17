@@ -3,16 +3,11 @@ package az.ingress.HotelReservation.controller;
 import az.ingress.HotelReservation.dto.request.HotelRequest;
 import az.ingress.HotelReservation.dto.response.HotelResponse;
 import az.ingress.HotelReservation.entity.Hotel;
-import az.ingress.HotelReservation.entity.RoomType;
 import az.ingress.HotelReservation.service.HotelServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Arrays;
-import java.util.stream.Collectors;
-
 
 import java.util.List;
 
@@ -30,18 +25,16 @@ public class HotelController {
     }
 
 
-
-
     @GetMapping("/singleRooms")
     public ResponseEntity<List<Hotel>> findSingleRooms() {
-        List<Hotel> singleRooms = hotelService.findSingleRooms();
-        return new ResponseEntity<>(singleRooms, HttpStatus.OK);
+        List<Hotel> singleRooms = hotelService.findSingleRooms ();
+        return new ResponseEntity<> (singleRooms, HttpStatus.OK);
     }
 
     @GetMapping("/doubleRooms")
     public ResponseEntity<List<Hotel>> findDoubleRooms() {
-        List<Hotel> doubleRooms = hotelService.findDoubleRooms();
-        return new ResponseEntity<>(doubleRooms, HttpStatus.OK);
+        List<Hotel> doubleRooms = hotelService.findDoubleRooms ();
+        return new ResponseEntity<> (doubleRooms, HttpStatus.OK);
     }
 
 

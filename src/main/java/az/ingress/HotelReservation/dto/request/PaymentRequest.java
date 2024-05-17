@@ -1,5 +1,6 @@
 package az.ingress.HotelReservation.dto.request;
 
+import az.ingress.HotelReservation.entity.PaymentMethod;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -13,5 +14,5 @@ public class PaymentRequest {
 
     String paymentDate;
 
-    String paymentMethod;
+    PaymentMethod paymentMethod;
 }

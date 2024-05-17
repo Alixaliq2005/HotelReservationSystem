@@ -1,6 +1,7 @@
 package az.ingress.HotelReservation.dto.response;
 
 
+import az.ingress.HotelReservation.entity.PaymentMethod;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -10,12 +11,12 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class PaymentResponse {
-    Long paymentId;
+    Long id;
 
     String paymentAmount;
 
     String paymentDate;
 
-    String paymentMethod;
+    PaymentMethod paymentMethod;
 
 }

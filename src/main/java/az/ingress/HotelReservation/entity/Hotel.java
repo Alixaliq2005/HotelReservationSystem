@@ -14,15 +14,17 @@ import lombok.experimental.FieldDefaults;
 public class Hotel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     Long id;
-
     String hotelName;
-
     String location;
-
     @Enumerated(EnumType.STRING)
     RoomType roomType;
-
+    String parking;
+    Boolean taxi_service;
+    @Enumerated(EnumType.STRING)
+    Meal meal;
     Double price;
+
+    Boolean swimming_pool;
+
 }

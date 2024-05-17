@@ -45,13 +45,13 @@ public class PaymentServiceImpl{
     public Payment update(PaymentRequest paymentRequest, Long id) {
         paymentRepository.findById(id).orElseThrow(() -> new RuntimeException ());
         Payment responsePayment = modelMapper.map(paymentRequest, Payment.class);
-        responsePayment.setPaymentId(id);
+        responsePayment.setId (id);
         return modelMapper.map(paymentRepository.save(responsePayment), Payment.class);
     }
 
 
-    public void delete(Long paymentId) {
-        Payment payment = paymentRepository.findById(paymentId).orElseThrow(() ->
+    public void delete(Long id) {
+        Payment payment = paymentRepository.findById(id).orElseThrow(() ->
                 new RuntimeException ());
         paymentRepository.delete(payment);
     }

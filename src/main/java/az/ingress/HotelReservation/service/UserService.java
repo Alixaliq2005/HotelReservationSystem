@@ -16,10 +16,7 @@ public class UserService {
 
 
     private final ModelMapper modelMapper;
-
     private final UserRepository userRepository;
-
-
     public void register(UserRegisterDto userRegisterDto) {
         User user = modelMapper.map (userRegisterDto, User.class);
 
